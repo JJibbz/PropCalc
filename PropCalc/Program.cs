@@ -21,6 +21,6 @@ namespace PropCalc
                 values[0] = sum;
                 values[1] = percents;
                 return values;  
-        }
+        }       
     }
 }

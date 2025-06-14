@@ -1,3 +1,4 @@
+using System.Globalization;
 namespace PropCalc
 {
     public partial class Form1 : Form
@@ -26,12 +27,12 @@ namespace PropCalc
         {
             try
             {
-                repaimentForDemand.Text = $"Сумма выплат конкретному кредитору ={double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(sizeOfDemand.Text), double.Parse(sumOfDemandsRegistry.Text))[0], 2)}" +
-                    $" - {double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(sizeOfDemand.Text), double.Parse(sumOfDemandsRegistry.Text))[1], 2)} %";
+                repaimentForDemand.Text = $"Сумма выплат конкретному кредитору ={double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text,CultureInfo.InvariantCulture), double.Parse(sizeOfDemand.Text, CultureInfo.InvariantCulture), double.Parse(sumOfDemandsRegistry.Text, CultureInfo.InvariantCulture))[0], 2)}" +
+                    $" - {double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text, CultureInfo.InvariantCulture), double.Parse(sizeOfDemand.Text, CultureInfo.InvariantCulture), double.Parse(sumOfDemandsRegistry.Text, CultureInfo.InvariantCulture))[1], 2)} %";
             }
             catch (Exception)
             {
-                MessageBox.Show("Перепроверьте заполненные данные! Дробная часть должна отделяться ЗАПЯТОЙ!!! В противном случае расчёты могут оказаться неверными!!!");
+                MessageBox.Show("Перепроверьте заполненные данные! Суммы указываются без пробелов!");
             }
         }
 

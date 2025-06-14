@@ -94,9 +94,10 @@
             // repaimentForDemand
             // 
             repaimentForDemand.AutoSize = true;
-            repaimentForDemand.Location = new Point(26, 186);
+            repaimentForDemand.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            repaimentForDemand.Location = new Point(12, 192);
             repaimentForDemand.Name = "repaimentForDemand";
-            repaimentForDemand.Size = new Size(238, 15);
+            repaimentForDemand.Size = new Size(350, 21);
             repaimentForDemand.TabIndex = 6;
             repaimentForDemand.Text = "Сумма выплат конкретному кредитору = ";
             // 
@@ -112,10 +113,10 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(37, 230);
+            richTextBox1.Location = new Point(12, 244);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(495, 173);
+            richTextBox1.Size = new Size(358, 133);
             richTextBox1.TabIndex = 8;
             richTextBox1.Text = resources.GetString("richTextBox1.Text");
             richTextBox1.TextChanged += richTextBox1_TextChanged;
