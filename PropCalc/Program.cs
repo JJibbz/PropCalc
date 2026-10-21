@@ -21,6 +21,13 @@ namespace PropCalc
                 values[0] = sum;
                 values[1] = percents;
                 return values;  
-        }       
+        }
+
+        public static string deDotification(string stringValueWithTheDot)
+        {
+            string result = stringValueWithTheDot.Replace('.', ',');
+            return result;
+        }
+       
     }
 }

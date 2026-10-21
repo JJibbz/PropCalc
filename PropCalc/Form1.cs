@@ -25,10 +25,13 @@ namespace PropCalc
 
         private void Calculate_Click(object sender, EventArgs e)
         {
+            availableSumForRegistryRepaiment.Text = Program.deDotification(availableSumForRegistryRepaiment.Text);
+            sizeOfDemand.Text = Program.deDotification(sizeOfDemand.Text);
+            sumOfDemandsRegistry.Text = Program.deDotification(sumOfDemandsRegistry.Text);
             try
             {
-                repaimentForDemand.Text = $"Сумма выплат конкретному кредитору ={double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text,CultureInfo.InvariantCulture), double.Parse(sizeOfDemand.Text, CultureInfo.InvariantCulture), double.Parse(sumOfDemandsRegistry.Text, CultureInfo.InvariantCulture))[0], 2)}" +
-                    $" - {double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text, CultureInfo.InvariantCulture), double.Parse(sizeOfDemand.Text, CultureInfo.InvariantCulture), double.Parse(sumOfDemandsRegistry.Text, CultureInfo.InvariantCulture))[1], 2)} %";
+                repaimentForDemand.Text = $"Сумма выплат конкретному кредитору ={double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(sizeOfDemand.Text), double.Parse(sumOfDemandsRegistry.Text))[0], 2)}" +
+                    $" - {double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(sizeOfDemand.Text), double.Parse(sumOfDemandsRegistry.Text))[1], 2)} %";
             }
             catch (Exception)
             {
