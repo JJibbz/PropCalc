@@ -10,7 +10,7 @@ namespace PropCalc
         {
             
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1()); 
+            Application.Run(new Form1());
         }
 
         public static double[] Calculate(double avSumForRep, double sizeOfDem, double sumOfDemReg)
