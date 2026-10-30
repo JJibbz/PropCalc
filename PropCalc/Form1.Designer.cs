@@ -100,9 +100,10 @@
             repaimentForDemand.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             repaimentForDemand.Location = new Point(12, 381);
             repaimentForDemand.Name = "repaimentForDemand";
-            repaimentForDemand.Size = new Size(252, 21);
+            repaimentForDemand.Size = new Size(237, 21);
             repaimentForDemand.TabIndex = 6;
-            repaimentForDemand.Text = "Сумма выплат кредиторам = ";
+            repaimentForDemand.Text = "Сумма выплат кредиторам ";
+            repaimentForDemand.UseMnemonic = false;
             repaimentForDemand.Click += repaimentForDemand_Click;
             // 
             // Calculate

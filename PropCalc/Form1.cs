@@ -6,6 +6,7 @@ namespace PropCalc
     {
         public List<TextBox> Creditors = new List<TextBox>();
         public List<Label> Numbers = new List<Label>();
+        public List<string> creditorStrings = new List<string>();
         public int numsCount = 2;
         public Form1()
         {
@@ -33,18 +34,37 @@ namespace PropCalc
         {
             availableSumForRegistryRepaiment.Text = Program.deDotification(availableSumForRegistryRepaiment.Text);
             sumOfDemandsRegistry.Text = Program.deDotification(sumOfDemandsRegistry.Text);
-            for (int i = 0; i <= Creditors.Count; i++)
+            for (int i = 0; i < Creditors.Count; i++)
             {
                 Creditors[i].Text = Program.deDotification(Creditors[i].Text);
             }
+            for(int i = 0; i < Creditors.Count; i++)
+            {
+                string x = null;
+                creditorStrings.Add(x);
+            }
             try
             {
-                repaimentForDemand.Text = $"Сумма выплат конкретному кредитору ={double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(sizeOfDemand.Text), double.Parse(sumOfDemandsRegistry.Text))[0], 2)}" +
-                    $" - {double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(sizeOfDemand.Text), double.Parse(sumOfDemandsRegistry.Text))[1], 2)} %";
+                for (int i = 0; i < Creditors.Count; i++)
+                {
+                    creditorStrings[i] = $"Сумма выплат кредитору № {Numbers[i].Text} = " +
+                        $"{double.Round(Program.Calculate
+                        (double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(Creditors[i].Text),
+                        double.Parse(sumOfDemandsRegistry.Text))[0], 2)}" +
+                        $" - {double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(Creditors[i].Text),
+                        double.Parse(sumOfDemandsRegistry.Text))[1], 2)}%";
+                    
+                }
+                for (int i = 0; i < Creditors.Count; i++)
+                {
+                    repaimentForDemand.Text += $"\n {creditorStrings[i]}";
+                }
+                
+                   
             }
             catch (Exception)
             {
-                MessageBox.Show("Перепроверьте заполненные данные! Суммы указываются без пробелов!");
+                MessageBox.Show("Перепроверьте заполненные данные! Суммы указываются без пробелов! Все имеющиеся ячейки должны быть заполнены!");
             }
         }
 
