@@ -13,11 +13,11 @@ namespace PropCalc
             Application.Run(new Form1());
         }
 
-        public static double[] Calculate(double avSumForRep, double sizeOfDem, double sumOfDemReg)
+        public static decimal[] Calculate(decimal avSumForRep, decimal sizeOfDem, decimal sumOfDemReg)
         {
-                double[] values = new double[2];
-                double sum = (avSumForRep * sizeOfDem) / sumOfDemReg;
-                double percents = 100 / (sizeOfDem / sum);
+                decimal[] values = new decimal[2];
+                decimal sum = (avSumForRep * sizeOfDem) / sumOfDemReg;
+                decimal percents = 100 / (sizeOfDem / sum);
                 values[0] = sum;
                 values[1] = percents;
                 return values;  

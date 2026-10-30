@@ -48,11 +48,11 @@ namespace PropCalc
                 for (int i = 0; i < Creditors.Count; i++)
                 {
                     creditorStrings[i] = $"Сумма выплат кредитору № {Numbers[i].Text} = " +
-                        $"{double.Round(Program.Calculate
-                        (double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(Creditors[i].Text),
-                        double.Parse(sumOfDemandsRegistry.Text))[0], 2)}" +
-                        $" - {double.Round(Program.Calculate(double.Parse(availableSumForRegistryRepaiment.Text), double.Parse(Creditors[i].Text),
-                        double.Parse(sumOfDemandsRegistry.Text))[1], 2)}%";
+                        $"{decimal.Round(Program.Calculate
+                        (decimal.Parse(availableSumForRegistryRepaiment.Text), decimal.Parse(Creditors[i].Text),
+                        decimal.Parse(sumOfDemandsRegistry.Text))[0], 2)}" +
+                        $" - {decimal.Round(Program.Calculate(decimal.Parse(availableSumForRegistryRepaiment.Text), decimal.Parse(Creditors[i].Text),
+                        decimal.Parse(sumOfDemandsRegistry.Text))[1], 2)}%";
                     
                 }
                 for (int i = 0; i < Creditors.Count; i++)
