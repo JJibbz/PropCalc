@@ -40,6 +40,7 @@
             richTextBox1 = new RichTextBox();
             addCredittorButton = new Button();
             Number = new Label();
+            deleteCreditorButton = new Button();
             SuspendLayout();
             // 
             // sumOfDemandsRegistry
@@ -145,11 +146,22 @@
             Number.TabIndex = 10;
             Number.Text = "1";
             // 
+            // deleteCreditorButton
+            // 
+            deleteCreditorButton.Location = new Point(259, 75);
+            deleteCreditorButton.Name = "deleteCreditorButton";
+            deleteCreditorButton.Size = new Size(27, 23);
+            deleteCreditorButton.TabIndex = 11;
+            deleteCreditorButton.Text = "-";
+            deleteCreditorButton.UseVisualStyleBackColor = true;
+            deleteCreditorButton.Click += deleteCreditor_click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(861, 581);
+            Controls.Add(deleteCreditorButton);
             Controls.Add(Number);
             Controls.Add(addCredittorButton);
             Controls.Add(richTextBox1);
@@ -181,5 +193,6 @@
         public RichTextBox richTextBox1;
         private Button addCredittorButton;
         private Label Number;
+        private Button deleteCreditorButton;
     }
 }

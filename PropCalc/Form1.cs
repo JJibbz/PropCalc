@@ -101,6 +101,22 @@ namespace PropCalc
             }
         }
 
+        private void deleteCreditor_click(object sender, EventArgs e)
+        {
+            if (Creditors.Count == 1)
+            {
+                MessageBox.Show("Достигнуто минимальное количество требований кредиторов");
+            }
+            else
+            {
+                Numbers.RemoveAt(Numbers.Count - 1);
+                Creditors.RemoveAt(Creditors.Count - 1);
+                this.Controls.RemoveAt(this.Controls.Count - 1);
+                this.Controls.RemoveAt(this.Controls.Count - 1);
+                numsCount = numsCount - 1;
+            }
+        }
+
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
