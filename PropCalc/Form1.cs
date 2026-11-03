@@ -15,21 +15,6 @@ namespace PropCalc
             Numbers.Add(Number);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SumOfDemandsRegistryChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Calculate_Click(object sender, EventArgs e)
         {
             availableSumForRegistryRepaiment.Text = Program.deDotification(availableSumForRegistryRepaiment.Text);
@@ -120,21 +105,6 @@ namespace PropCalc
         private void Reset_click(object sender, EventArgs e)
         {
             Application.Restart();
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void repaimentForDemand_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

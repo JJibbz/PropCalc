@@ -51,7 +51,6 @@
             sumOfDemandsRegistry.Name = "sumOfDemandsRegistry";
             sumOfDemandsRegistry.Size = new Size(154, 23);
             sumOfDemandsRegistry.TabIndex = 0;
-            sumOfDemandsRegistry.TextChanged += SumOfDemandsRegistryChanged;
             // 
             // label1
             // 
@@ -61,7 +60,6 @@
             label1.Size = new Size(246, 15);
             label1.TabIndex = 1;
             label1.Text = "Общая сумма всех требований кредиторов";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -71,7 +69,6 @@
             label2.Size = new Size(143, 15);
             label2.TabIndex = 2;
             label2.Text = "Требования кредиторов:";
-            label2.Click += label2_Click;
             // 
             // availableSumForRegistryRepaiment
             // 
@@ -106,7 +103,6 @@
             repaimentForDemand.TabIndex = 6;
             repaimentForDemand.Text = "Сумма выплат кредиторам: ";
             repaimentForDemand.UseMnemonic = false;
-            repaimentForDemand.Click += repaimentForDemand_Click;
             // 
             // Calculate
             // 
@@ -126,7 +122,6 @@
             richTextBox1.Size = new Size(358, 133);
             richTextBox1.TabIndex = 8;
             richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // addCredittorButton
             // 
@@ -187,7 +182,6 @@
             Controls.Add(sumOfDemandsRegistry);
             Name = "Form1";
             Text = "Калькулятор пропорций";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
