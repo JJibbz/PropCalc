@@ -117,6 +117,11 @@ namespace PropCalc
             }
         }
 
+        private void Reset_click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 

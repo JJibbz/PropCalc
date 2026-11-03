@@ -41,6 +41,7 @@
             addCredittorButton = new Button();
             Number = new Label();
             deleteCreditorButton = new Button();
+            resetButton = new Button();
             SuspendLayout();
             // 
             // sumOfDemandsRegistry
@@ -67,9 +68,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(26, 59);
             label2.Name = "label2";
-            label2.Size = new Size(140, 15);
+            label2.Size = new Size(143, 15);
             label2.TabIndex = 2;
-            label2.Text = "Требования кредиторов";
+            label2.Text = "Требования кредиторов:";
             label2.Click += label2_Click;
             // 
             // availableSumForRegistryRepaiment
@@ -101,9 +102,9 @@
             repaimentForDemand.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             repaimentForDemand.Location = new Point(12, 381);
             repaimentForDemand.Name = "repaimentForDemand";
-            repaimentForDemand.Size = new Size(237, 21);
+            repaimentForDemand.Size = new Size(242, 21);
             repaimentForDemand.TabIndex = 6;
-            repaimentForDemand.Text = "Сумма выплат кредиторам ";
+            repaimentForDemand.Text = "Сумма выплат кредиторам: ";
             repaimentForDemand.UseMnemonic = false;
             repaimentForDemand.Click += repaimentForDemand_Click;
             // 
@@ -156,11 +157,22 @@
             deleteCreditorButton.UseVisualStyleBackColor = true;
             deleteCreditorButton.Click += deleteCreditor_click;
             // 
+            // resetButton
+            // 
+            resetButton.Location = new Point(778, 546);
+            resetButton.Name = "resetButton";
+            resetButton.Size = new Size(75, 23);
+            resetButton.TabIndex = 12;
+            resetButton.Text = "Сбросить";
+            resetButton.UseVisualStyleBackColor = true;
+            resetButton.Click += Reset_click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(861, 581);
+            Controls.Add(resetButton);
             Controls.Add(deleteCreditorButton);
             Controls.Add(Number);
             Controls.Add(addCredittorButton);
@@ -194,5 +206,6 @@
         private Button addCredittorButton;
         private Label Number;
         private Button deleteCreditorButton;
+        private Button resetButton;
     }
 }
